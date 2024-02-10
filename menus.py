@@ -1,40 +1,34 @@
 
 def menuPrincipal():
-    print("""_______Bienvenidos a la gestión de eventos_______
-          1. Gestión de eventos
-          2. Gestión de participantes
+    print("""_______Bienvenidos a la gestión de Campus_______
+          1. Gestión de Coordinador
+          2. Gestión de Trainer
+          3. Gestión de Camper
           0. Salir""")
     opc = int(input("Ingrese la opción deseada: "))
     return opc
 
-
-def menuParticipantes():
-    print("""_______Bienvenidos a la gestión de eventos_______
-          _______Gestión de participantes_______
-          1. Registrar participantes
-          2. Eliminar participante
-          3. Mostrar participantes que no han cancelado
-          4. Saber cuantos participantes no han cancelado
-          0. Salir al menu principal""")
+def menuCamper():
+    print("""_______Bienvenidos a la gestión de Campus_______
+          _______Gestión de Camper_______
+          1. Registrar camper
+          """)
+    opc = int(input("Ingrese la opción deseada: "))    
+    return opc
+    
+def menuTrainer():
+    print("""_______Bienvenidos a la gestión de Campus_______
+          _______Gestión de Trainer_______
+          1. Registrar trainer
+          """)
     opc = int(input("Ingrese la opción deseada: "))
     return opc
 
-
-def menuEventos():
-    print("""_______Bienvenidos a la gestión de eventos_______
-          _______Gestión de eventos_______
-          1. Registrar eventos
-          2. Marcar evento finalizado
-          3. Modificar evento
-          4. Eliminar evento
-          5. Mostrar eventos
-          0. Salir al menu principal""")
+def menuCoordinador(campus):
+    print("""_______Bienvenidos a la gestión de Campus_______
+          _______Gestión de Coordinador_______
+          1. Registrar las notas de un camper
+          """)
     opc = int(input("Ingrese la opción deseada: "))    
     return opc
 
-def confirmacion():
-    validacion = input("Ingrese salir para salir o cualquier otra opción o valor para continuar: ")
-    if(validacion.lower() == "salir"):
-        return True
-    else:
-        return False
