@@ -2,6 +2,7 @@ def regtrainer(trainer,campus):
     d={
         "nombre":str(input("Ingrese el nombre del trainer: ")),
         "apellido":str(input("Ingrese el apellido del trainer: ")),
+        "horario":str(input("Ingrese el horario del trainer: ")),
     }
     trainer.append(d)
     campus["trainer"]=trainer

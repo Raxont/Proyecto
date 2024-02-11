@@ -28,6 +28,7 @@ def menuCoordinador(campus):
     print("""_______Bienvenidos a la gestión de Campus_______
           _______Gestión de Coordinador_______
           1. Registrar las notas de un camper
+          2. Ingresar al camper en una ruta
           """)
     opc = int(input("Ingrese la opción deseada: "))    
     return opc

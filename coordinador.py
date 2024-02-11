@@ -1,3 +1,5 @@
+import camper
+import rutas
 #Registrar las notas de un camper
 def m(opcion,camper):
     try:
@@ -15,6 +17,13 @@ def m(opcion,camper):
                     else:
                         camper[posicion]["estado"]="No aprobado"
                         return camper
+            print(f"El participante {nombre} no se encontró en ningún evento.")
+        elif opcion==2:
+            nombre=str(input("Ingrese el nombre del camper a registrar las notas: "))
+            for i in camper:
+                if nombre == i["nombre"]:
+                    posicion=camper.index(i)
+                    camper.inscribir()
             print(f"El participante {nombre} no se encontró en ningún evento.")
         else:
             print("Opcion no valida, ingrese una opcion valida(1-3)")
