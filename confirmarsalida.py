@@ -2,7 +2,7 @@ def salida():
      while True:
         respuesta = input("¿Estás seguro de que quieres salir? (s/n): ").lower().strip()
         if respuesta == 's':
-            print("Saliendo del programa...")
+            print("Saliendo...")
             return True
         elif respuesta == 'n':
             print("Volviendo al menú principal.")

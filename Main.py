@@ -4,10 +4,12 @@ import camper
 import coordinador
 import menus
 import trainer
+import rutas
 #Programa para llevar el seguimiento académico de todos los campers que se encuentran matriculados en el programa intensivo de programación.
 camper=[]
-trainer={}
+trainer=[]
 campus={}
+campus["rutas"]=rutas.rutass(camper,trainer)
 while True:
     try:
         opc = menus.menuPrincipal()
@@ -15,8 +17,8 @@ while True:
             #Menu Coordinador
             clave=input("Ingrese la clave del coordinador para ingresar: ")
             if clave=="1":
-               opcCorrdinador=menus.menuCoordinador(camper)
-               coordinador.m(opcCorrdinador,camper)
+               opcCorrdinador=menus.menuCoordinador()
+               coordinador.m(opcCorrdinador,camper,campus)
             else:
                 print("Clave incorrecta")
         elif opc == 2:
@@ -27,10 +29,10 @@ while True:
                 trainer.regtrainer(opcp,camper,campus)
             else:
                 print("Clave incorrecta")
-        elif opc == 3:
+        elif opc==3:
             #Menu Camper
-            opcp = menus.menuParticipantes()
-            camper.opcioncamper(opcp)
+            opcp = menus.menuCamper()
+            camper.opcioncamper(opcp,camper,campus)
         elif opc == 0:
             #Salir
             if confirmarsalida.salida():
