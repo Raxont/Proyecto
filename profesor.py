@@ -7,7 +7,7 @@ def regtrainer(trainer,campus):
     horario=int(input("Ingrese la cantidad de horas a trabajar(0-24)h :"))
     while horario<0 or horario>24:
         horario=int(input("Error, la cantidad de horas a trabajar nuevamente(0-24)h :"))
-    tiempo=str(input("El horario es en la mañana?(s/n) :"))
+    tiempo=str(input("El horario es en la mañana?(s/n) :")).lower()
     d={
         "nombre":nombre,
         "apellido":apellido,
@@ -15,12 +15,12 @@ def regtrainer(trainer,campus):
         "tiempo":tiempo,
     }
     trainer.append(d)
-    if tiempo==True:
+    if tiempo=="s":
         campus["trainer"]=trainer
     return trainer,campus
 
 #Opciones del menu del trainer --------------------------------------------------------
-def gestion_participantes(opcion,trainer,campus):
+def menu(opcion,trainer,campus):
     try:    
         if opcion == 1:
             regtrainer(trainer,campus)

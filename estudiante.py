@@ -1,5 +1,4 @@
-import rutas
-import confirmarsalida
+
 #Funcion para ingresar los datos de un camper ----------------------------------------
 def regparticipantes(camper,campus):
     d={
@@ -17,7 +16,7 @@ def regparticipantes(camper,campus):
     return camper,campus
 
 #Opciones del menu del camper --------------------------------------------------------
-def opcioncamper(opcion,camper,campus):
+def opcc(opcion,camper,campus):
     if opcion == 1:
         regparticipantes(camper,campus)
     elif opcion == 0: 
@@ -31,13 +30,4 @@ def opcioncamper(opcion,camper,campus):
         print("********************************")
 
 
-# Función para inscribir a un camper en una ruta --------------------------------------
-def inscribir(ncamper,nruta,camper,trainer):
-    d=rutas.rutass(camper,trainer)
-    if len(d[nruta]['campers']) < d[nruta]['capacidad']:
-        camper['rutas'].append(ruta_id)
-        ruta['sala']['campers'].append(camper_id)
-        camper['inscrito'] = True
-        print(f"El camper {camper['name']} se ha inscrito en la ruta {ruta['name']}.")
-    else:
-        print("La sala de entrenamiento está llena.")
+

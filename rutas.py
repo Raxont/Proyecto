@@ -4,43 +4,43 @@
 - Programación formal (Java, JavaScript, C#).
 - Bases de datos (Mysql, MongoDb y Postgresql). Cada ruta tiene un SGDB principal y un alternativo.
 - Backend (NetCore, Spring Boot, NodeJS y Express)."""
-def rutass(campers,trainers):
+def rutass(campers):
     d={
         "Fundamentos de programación":{
             1:{
-              'hora':[{1:"0-4",'nombre': 'Introducción a la algoritmia','capacidad': 33,'campers': campers},
-                     {2:"4-8",'nombre': 'PSeInt','capacidad': 33,'campers': campers},
-                     {3:"8-12",'nombre': 'Python','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              1:{"hora":"0-4",'nombre': 'Introducción a la algoritmia','capacidad': 33,'campers': campers},
+              2:{"hora":"4-8",'nombre': 'PSeInt','capacidad': 33,'campers': campers},
+              3:{"hora":"8-12",'nombre': 'Python','capacidad': 33,'campers': campers},
+              'trainers': ""
               },
             2:{
               'hora':[{1:"0-4",'nombre': 'Introducción a la algoritmia','capacidad': 33,'campers': campers},
                      {2:"4-8",'nombre': 'PSeInt','capacidad': 33,'campers': campers},
                      {3:"8-12",'nombre': 'Python','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              'trainers': ""
               },
             3:{
               'hora':[{1:"0-4",'nombre': 'Introducción a la algoritmia','capacidad': 33,'campers': campers},
                      {2:"4-8",'nombre': 'PSeInt','capacidad': 33,'campers': campers},
                      {3:"8-12",'nombre': 'Python','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              'trainers': ""
               }
             },
         "Programación Web": {
             1:{'hora':[{1:"0-4",'nombre': 'Html','capacidad': 33,'campers': campers},
                      {2:"4-8",'nombre': 'CSS','capacidad': 33,'campers': campers},
                      {3:"8-12",'nombre': 'Bootstrap','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              'trainers': ""
               },
             2:{'hora':[{1:"0-4",'nombre': 'Html','capacidad': 33,'campers': campers},
                      {2:"4-8",'nombre': 'CSS','capacidad': 33,'campers': campers},
                      {3:"8-12",'nombre': 'Bootstrap','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              'trainers': ""
               },
             3:{'hora':[{1:"0-4",'nombre': 'Html','capacidad': 33,'campers': campers},
                      {2:"4-8",'nombre': 'CSS','capacidad': 33,'campers': campers},
                      {3:"8-12",'nombre': 'Bootstrap','capacidad': 33,'campers': campers}],
-              'trainers': trainers
+              'trainers': ""
               },
             },
         "Programación formal": {
@@ -59,7 +59,7 @@ def rutass(campers,trainers):
             'teorico': 30, 
             'practico': 60,
             "trabajo":10,
-            'trainers': trainers,
+            'trainers': ""
             },
         "Bases de datos": {
             '0-4':{'sala':1,
@@ -77,7 +77,7 @@ def rutass(campers,trainers):
             'teorico': 30, 
             'practico': 60,
             "trabajo":10,
-            'trainers': trainers,
+            'trainers': ""
             },
         "Backend": {
             '0-4':{'sala':1,
@@ -95,7 +95,7 @@ def rutass(campers,trainers):
             'teorico': 30, 
             'practico': 60,
             "trabajo":10,
-            'trainers': trainers,
+            'trainers': ""
             },
     }
     return d

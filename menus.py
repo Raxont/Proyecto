@@ -21,7 +21,6 @@ def menuTrainer():
     print("""_______Bienvenidos a la gestión de Campus_______
           _______Gestión de Trainer_______
           1. Registrar trainer
-          2. Ingresar trainer a una ruta
           0. Salir
           """)
     opc = int(input("Ingrese la opción deseada: "))
