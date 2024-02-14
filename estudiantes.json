@@ -1,0 +1,15 @@
+[
+    {
+        "nombre": "Carlos",
+        "apellido": "Andres",
+        "documento": "123456789",
+        "direccion": "Guallaba",
+        "acudiente": "Mandrina",
+        "telefono": "1234",
+        "estado": "En proceso de ingreso",
+        "inicial": "Aprobado",
+        "rendimiento": "medio",
+        "riesgo": "bajo",
+        "atencion": "no"
+    }
+]

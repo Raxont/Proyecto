@@ -1,0 +1,49 @@
+[
+    {
+        "nombre": "Fundamentos de programacion",
+        "salon": {
+            "1": {
+                "1": {
+                    "horario": "0-4",
+                    "capacidad": 33
+                },
+                "2": {
+                    "horario": "4-8",
+                    "capacidad": 33
+                },
+                "3": {
+                    "horario": "8-12",
+                    "capacidad": 33
+                }
+            },
+            "2": {
+                "1": {
+                    "horario": "0-4",
+                    "capacidad": 33
+                },
+                "2": {
+                    "horario": "4-8",
+                    "capacidad": 33
+                },
+                "3": {
+                    "horario": "8-12",
+                    "capacidad": 33
+                }
+            },
+            "3": {
+                "1": {
+                    "horario": "0-4",
+                    "capacidad": 33
+                },
+                "2": {
+                    "horario": "4-8",
+                    "capacidad": 33
+                },
+                "3": {
+                    "horario": "8-12",
+                    "capacidad": 33
+                }
+            }
+        }
+    }
+]

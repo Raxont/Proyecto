@@ -1,24 +1,30 @@
-
+import json
 #Funcion para ingresar los datos de un camper ----------------------------------------
-def regparticipantes(camper,campus):
+def regparticipantes():
+    with open('estudiantes.json', 'r') as estudiantes_file:
+        estudiantes_info = json.load(estudiantes_file)
     d={
-        "nombre":str(input("Ingrese el nombre del camper: ")),
-        "apellido":str(input("Ingrese el apellido del camper: ")),
-        "documento":str(input("Ingrese el # de documento del camper: ")),
-        "direccion":str(input("Ingrese la direccion del camper: ")),
-        "acudiente":str(input("Ingrese el nombre del acudiente del camper: ")),
-        "telefono":str(input("Ingrese el # de celular y # fijo del camper: ")),
+        "nombre":input("Ingrese el nombre del camper: "),
+        "apellido":input("Ingrese el apellido del camper: "),
+        "documento":input("Ingrese el # de documento del camper: "),
+        "direccion":input("Ingrese la direccion del camper: "),
+        "acudiente":input("Ingrese el nombre del acudiente del camper: "),
+        "telefono":input("Ingrese el # de celular y # fijo del camper: "),
         "estado":"En proceso de ingreso",
-        "riesgo":"Inscrito"
+        "inicial":"Aprobado",
+        "rendimiento":"medio",
+        "riesgo":"bajo",
+        "atencion":"no"
     }
-    camper.append(d)
-    campus["camper"]=camper
-    return camper,campus
+    estudiantes_info.append(d)
+
+    with open ('estudiantes.json','w') as estudiantes_file:
+        json.dump(estudiantes_info, estudiantes_file, indent=4) 
 
 #Opciones del menu del camper --------------------------------------------------------
-def opcc(opcion,camper,campus):
+def opcc(opcion):
     if opcion == 1:
-        regparticipantes(camper,campus)
+        regparticipantes()
     elif opcion == 0: 
         #Salir
         print("********************************")

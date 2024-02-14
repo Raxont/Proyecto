@@ -4,12 +4,12 @@ import estudiante
 import academico
 import menus
 import profesor
-import rutas
+import reportes
 #Programa para llevar el seguimiento académico de todos los campers que se encuentran matriculados en el programa intensivo de programación.
 camper=[]
 trainer=[]
 campus={}
-campus["rutas"]=rutas.rutass(camper)
+#campus["rutas"]=rutas.rutass(camper)
 while True:
     try:
         opc = menus.menuPrincipal()
@@ -18,7 +18,7 @@ while True:
             clave=input("Ingrese la clave del coordinador para ingresar: ")
             if clave=="1":
                opcCorrdinador=menus.menuCoordinador()
-               academico.m(opcCorrdinador,camper,trainer,campus)
+               academico.m(opcCorrdinador)
             else:
                 print("Clave incorrecta")
         elif opc == 2:
@@ -26,13 +26,17 @@ while True:
             clave=input("Ingrese la clave del Trainer para ingresar: ")
             if clave=="2":
                 opcp = menus.menuTrainer()
-                profesor.menu(opcp,trainer,campus)
+                profesor.menu(opcp)
             else:
                 print("Clave incorrecta")
         elif opc==3:
             #Menu Camper
             op=menus.menuCamper()
-            estudiante.opcc(op,camper,campus)
+            estudiante.opcc(op)
+        elif opc==4:
+            #Menu reportes ----------------------------------------------
+            opcior=menus.menuReportes()
+            reportes.imp(opcior,camper,trainer,campus)
         elif opc == 0:
             #Salir
             if confirmarsalida.salida():
@@ -47,3 +51,4 @@ while True:
         print("**************************")
         print("Ingrese una opción válida")
         print("**************************")
+        

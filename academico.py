@@ -1,30 +1,43 @@
-import rutas
 import menus
 import confirmarsalida
+import notas
+import json
 #Opciones del menu del coordinador --------------------------------------------------------
-def m(opcion,camper,trainer,campus):
+def m(opcion):
     try:
-        if opcion==1: #Registrar notas del camper ------------------------------------------
-            nombre=str(input("Ingrese el nombre del camper a registrar las notas: "))
-            for i in camper:
-                if nombre == i["nombre"]:
-                    posicion=camper.index(i)
-                    teorica=float(input("Ingrese la nota teorica"))
-                    practica=float(input("Ingrese la nota practica"))
-                    total=(teorica*total)/2
-                    if total>=60:
-                        camper[posicion]["estado"]="Inscrito"
-                        return camper
-                    else:
-                        camper[posicion]["estado"]="No Inscrito"
-                        return camper
-                else:    
-                    print(f"El camper {nombre} no se encontró registrado.")
-        elif opcion==2: #Ingresar un trainer a un salon ---------------------------------
+        if opcion==1: #Registrar notas iniciales del camper ------------------------------------------
+            #notas.notar(camper)
+            print("")
+        elif opcion==2: #Crear una ruta --------------------------------------------------------------
+            with open('rutas.json', 'r') as ruta_file:
+                ruta_info = json.load(ruta_file)
+            nombreruta=str(input("Ingrese el nombre de la ruta a crear: "))
+            nueva_ruta = {
+                "nombre":nombreruta,
+                "salon":{
+                        "1":{
+                            "1":{"horario":"0-4","capacidad": 33},
+                            "2":{"horario":"4-8","capacidad": 33},
+                            "3":{"horario":"8-12","capacidad": 33}},
+                        "2":{
+                            "1":{"horario":"0-4","capacidad": 33},
+                            "2":{"horario":"4-8","capacidad": 33},
+                            "3":{"horario":"8-12","capacidad": 33}},
+                        "3":{
+                            "1":{"horario":"0-4","capacidad": 33},
+                            "2":{"horario":"4-8","capacidad": 33},
+                            "3":{"horario":"8-12","capacidad": 33}}
+                        }
+                    }
+            ruta_info.append(nueva_ruta)
+            with open ('rutas.json','w') as ruta_file:
+                json.dump(ruta_info, ruta_file, indent=4) 
+        elif opcion==3: #Ingresar un trainer a un salon ---------------------------------
+            with open('profesor.json', 'r') as profe_file:
+                profe_info = json.load(profe_file)
             nombret=str(input("Ingrese el nombre del trainer: "))
-            for i in trainer:
-                if nombret == i["nombre"]:
-                    posicion=trainer.index(i)
+            for i in profe_info:
+                if i['nombre'] == nombret:
                     print("Ingrese la ruta a la cual va a pertenecer el trainer ")
                     opct=menus.menuRutas()
                     salon=int(input("Ingrese el salon a cual va a ser asignado(1-3): "))
@@ -42,7 +55,7 @@ def m(opcion,camper,trainer,campus):
                         print("Opcion incorrecta")
                 else:
                     print(f"El trainer {nombret} no esta registrado.")
-        elif opcion==3: #Asignar camper a una ruta -----------------------------------------
+        elif opcion==4: #Asignar camper a una ruta -----------------------------------------
             nombre=str(input("Ingrese el nombre del camper a asignar una ruta: "))
             salon=int(input("Ingrese el salon del camper (1-3): "))
             while salon!=1 and salon!=2 and salon!=3:
@@ -68,6 +81,8 @@ def m(opcion,camper,trainer,campus):
                     else:
                         print("El estudiante no aprobo el examen por lo tanto no puede continuar en el programa.")
             print(f"El camper {nombre} no esta registrado.")
+        elif opcion==5: #Registrar las notas del modulo
+            notas.no(camper)
         elif opcion==0: #Salir ---------------------------------
             print("********************************")
             print("Volviendo al menú principal.")
@@ -87,7 +102,7 @@ def inscribir(camper,nruta,salon,campus,hora):
     if len(rutaa["campers"]) < rutaa["capacidad"]:
         camper["ruta"].append(nruta)
         campus["rutas"][nruta][salon][hora]["campers"].append(camper)
-        camper['estado'] = "Aprobado"
+        camper["estado"] = "inscrito"
         print(f"El camper {camper["nombre"]} se ha inscrito en la ruta {nruta}.")
     else:
         print("La sala de entrenamiento está llena.")
