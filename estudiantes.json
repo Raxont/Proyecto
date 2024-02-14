@@ -6,10 +6,23 @@
         "direccion": "Guallaba",
         "acudiente": "Mandrina",
         "telefono": "1234",
-        "estado": "En proceso de ingreso",
+        "estado": "inscrito",
         "inicial": "Aprobado",
-        "rendimiento": "medio",
-        "riesgo": "bajo",
-        "atencion": "no"
+        "rendimiento": "bajo",
+        "riesgo": "alto",
+        "atencion": "si"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido": "Andres",
+        "documento": "123456789",
+        "direccion": "Guallaba",
+        "acudiente": "Mandrina",
+        "telefono": "1234",
+        "estado": "inscrito",
+        "inicial": "Aprobado",
+        "rendimiento": "bajo",
+        "riesgo": "alto",
+        "atencion": "si"
     }
 ]

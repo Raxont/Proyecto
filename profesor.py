@@ -7,9 +7,9 @@ def regtrainer():
         profe_info = json.load(profe_file)
     nombre=str(input("Ingrese el nombre del trainer: "))
     apellido=str(input("Ingrese el apellido del trainer: "))
-    horario=int(input("Ingrese la cantidad de horas a trabajar(0-24)h :"))
-    while horario<0 or horario>24:
-        horario=int(input("Error, la cantidad de horas a trabajar nuevamente(0-24)h :"))
+    horario=int(input("Ingrese la cantidad de horas a trabajar, recuerda que solo puede trabajar maximo 12h :"))
+    while horario<0 or horario>12:
+        horario=int(input("Error, la cantidad de horas a trabajar nuevamente :"))
     tiempo=str(input("El horario es en la mañana?(s/n) :")).lower()
     while tiempo!="s" and tiempo!="n":
         tiempo=str(input("Error, debe digitar una opcion indicada(s/n) :")).lower()
@@ -17,6 +17,7 @@ def regtrainer():
         "nombre":nombre,
         "apellido":apellido,
         "horas":horario,
+        "tiempo":tiempo
     }
     if tiempo=="s":
         profe_info.append(d)

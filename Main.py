@@ -48,6 +48,7 @@ while True:
             print("********************************")
     except Exception as e:
         #Error para la opc
+        print(e)
         print("**************************")
         print("Ingrese una opción válida")
         print("**************************")

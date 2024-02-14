@@ -32,9 +32,10 @@ def menuCoordinador():
           _______Gestión de Coordinador_______
           1. Registrar las notas iniciales de un camper
           2. Crear una ruta de aprendizaje
-          3. Ingresar un trainer a un salon
-          4. Ingresar al camper en una ruta
-          5. Ingresar las notas finales del modulo
+          3. Crear los modulos de las rutas y su horario
+          4. Ingresar un trainer a un salon
+          5. Ingresar al camper en una ruta
+          6. Ingresar las notas finales del modulo
           0. Salir
           """)
     opc = int(input("Ingrese la opción deseada: "))    
@@ -44,11 +45,11 @@ def menuRutas():
     print("""_______Bienvenidos a la gestión de Campus_______
           _______Gestión de rutas_______
           Rutas:
-            1) Fundamentos de programación (Introducción a la algoritmia, PSeInt y Python)
-            2) Programación Web (HTML, CSS y Bootstrap).
-            3) Programación formal (Java, JavaScript, C#).
-            4) Bases de datos (Mysql, MongoDb y Postgresql). Cada ruta tiene un SGDB principal y un alternativo.
-            5) Backend (NetCore, Spring Boot, NodeJS y Express).""")
+            1) Fundamentos de programacion
+            2) Programacion Web
+            3) Programacion formal
+            4) Bases de datos
+            5) Backend""")
     opc = int(input("Ingrese la opción deseada: "))
     return opc
 
