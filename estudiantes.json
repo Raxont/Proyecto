@@ -24,5 +24,18 @@
         "rendimiento": "bajo",
         "riesgo": "alto",
         "atencion": "si"
+    },
+    {
+        "nombre": "Camilo",
+        "apellido": "Andres",
+        "documento": "123456789",
+        "direccion": "Guallaba",
+        "acudiente": "Mandrina",
+        "telefono": "1234",
+        "estado": "inscrito",
+        "inicial": "Aprobado",
+        "rendimiento": "bajo",
+        "riesgo": "alto",
+        "atencion": "si"
     }
 ]

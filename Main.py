@@ -9,7 +9,6 @@ import reportes
 camper=[]
 trainer=[]
 campus={}
-#campus["rutas"]=rutas.rutass(camper)
 while True:
     try:
         opc = menus.menuPrincipal()

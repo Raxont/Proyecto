@@ -5,15 +5,42 @@
             "1": {
                 "trainer": [
                     {
-                        "nombre": "Manuel",
+                        "nombre": "Juan",
                         "apellido": "Camilo",
-                        "horas": 12,
-                        "tiempo": "s"
+                        "horas": 12
                     }
                 ],
-                "Introduccion": {
+                "i": {
                     "horario": "0-4",
-                    "capacidad": 33
+                    "capacidad": 33,
+                    "camper": [
+                        {
+                            "nombre": "Carlos",
+                            "apellido": "Andres",
+                            "documento": "123456789",
+                            "direccion": "Guallaba",
+                            "acudiente": "Mandrina",
+                            "telefono": "1234",
+                            "estado": "inscrito",
+                            "inicial": "Aprobado",
+                            "rendimiento": "bajo",
+                            "riesgo": "alto",
+                            "atencion": "si"
+                        },
+                        {
+                            "nombre": "Camilo",
+                            "apellido": "Andres",
+                            "documento": "123456789",
+                            "direccion": "Guallaba",
+                            "acudiente": "Mandrina",
+                            "telefono": "1234",
+                            "estado": "inscrito",
+                            "inicial": "Aprobado",
+                            "rendimiento": "bajo",
+                            "riesgo": "alto",
+                            "atencion": "si"
+                        }
+                    ]
                 }
             },
             "2": {},
