@@ -17,7 +17,11 @@ def regparticipantes():
         "atencion":"no"
     }
     estudiantes_info.append(d)
-
+    print("*************************************")
+    print("* Estudiante agregado correctamente *")
+    print("*************************************")
+    print("")
+    print("Regresando al menu...")
     with open ('estudiantes.json','w') as estudiantes_file:
         json.dump(estudiantes_info, estudiantes_file, indent=4) 
 
@@ -31,9 +35,9 @@ def opcc(opcion):
         print("Volviendo al menú principal.")
         print("********************************")
     else:
-        print("********************************")
-        print("El valor no está en las opciones")
-        print("********************************")
+        print("************************************")
+        print("* El valor no está en las opciones *")
+        print("************************************")
 
 
 

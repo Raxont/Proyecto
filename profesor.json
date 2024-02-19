@@ -1,12 +1,7 @@
 [
     {
-        "nombre": "Manuel",
-        "apellido": "Camilo",
-        "horas": 12
-    },
-    {
         "nombre": "Juan",
-        "apellido": "Camilo",
-        "horas": 12
+        "apellido": "Carlos",
+        "tiempo": "dia"
     }
 ]

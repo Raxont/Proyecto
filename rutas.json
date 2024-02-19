@@ -6,45 +6,53 @@
                 "trainer": [
                     {
                         "nombre": "Juan",
-                        "apellido": "Camilo",
-                        "horas": 12
+                        "apellido": "Carlos",
+                        "tiempo": "dia"
                     }
                 ],
+                "tiempo": "dia",
+                "capacidad": 33,
                 "i": {
-                    "horario": "0-4",
-                    "capacidad": 33,
                     "camper": [
                         {
-                            "nombre": "Carlos",
-                            "apellido": "Andres",
+                            "nombre": "Camilo",
+                            "apellido": "Navas",
                             "documento": "123456789",
-                            "direccion": "Guallaba",
-                            "acudiente": "Mandrina",
-                            "telefono": "1234",
+                            "direccion": "Cra 9",
+                            "acudiente": "Cris",
+                            "telefono": "12345",
                             "estado": "inscrito",
                             "inicial": "Aprobado",
-                            "rendimiento": "bajo",
-                            "riesgo": "alto",
-                            "atencion": "si"
+                            "rendimiento": "alto",
+                            "riesgo": "bajo",
+                            "atencion": "no",
+                            "NotaFinal": 80.0,
+                            "final": "Cursando"
                         },
                         {
-                            "nombre": "Camilo",
-                            "apellido": "Andres",
-                            "documento": "123456789",
-                            "direccion": "Guallaba",
-                            "acudiente": "Mandrina",
-                            "telefono": "1234",
+                            "nombre": "Maria",
+                            "apellido": "Medina",
+                            "documento": "1235",
+                            "direccion": "nose",
+                            "acudiente": "rodolfo",
+                            "telefono": "765",
                             "estado": "inscrito",
                             "inicial": "Aprobado",
-                            "rendimiento": "bajo",
-                            "riesgo": "alto",
-                            "atencion": "si"
+                            "rendimiento": "alto",
+                            "riesgo": "bajo",
+                            "atencion": "no",
+                            "NotaFinal": 90.0,
+                            "final": "Cursando"
                         }
                     ]
                 }
             },
-            "2": {},
-            "3": {}
+            "2": {
+                "trainer": []
+            },
+            "3": {
+                "trainer": []
+            }
         }
     }
 ]

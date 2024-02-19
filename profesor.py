@@ -7,24 +7,22 @@ def regtrainer():
         profe_info = json.load(profe_file)
     nombre=str(input("Ingrese el nombre del trainer: "))
     apellido=str(input("Ingrese el apellido del trainer: "))
-    horario=int(input("Ingrese la cantidad de horas a trabajar, recuerda que solo puede trabajar maximo 12h :"))
-    while horario<0 or horario>12:
-        horario=int(input("Error, la cantidad de horas a trabajar nuevamente :"))
-    tiempo=str(input("El horario es en la mañana?(s/n) :")).lower()
-    while tiempo!="s" and tiempo!="n":
-        tiempo=str(input("Error, debe digitar una opcion indicada(s/n) :")).lower()
+    tiempo=str(input("ingrese el horario del profesor(dia,tarde,noche): ")).lower()
+    while tiempo!="dia" and tiempo!="tarde" and tiempo!="noche":
+        tiempo=str(input("Error, debe digitar una opcion indicada(dia,tarde,noche): ")).lower()
     d={
         "nombre":nombre,
         "apellido":apellido,
-        "horas":horario,
         "tiempo":tiempo
     }
-    if tiempo=="s":
-        profe_info.append(d)
-        with open ('profesor.json','w') as profe_file:
-            json.dump(profe_info, profe_file, indent=4) 
-    elif tiempo=="n":
-        print("Lo lamentamos, solo necesitamos trainers en la mañana")
+    profe_info.append(d)
+    print("*************************************")
+    print("* Profesor agregado correctamente *")
+    print("*************************************")
+    print("")
+    print("Regresando al menu...")
+    with open ('profesor.json','w') as profe_file:
+        json.dump(profe_info, profe_file, indent=4) 
 
 #Opciones del menu del trainer --------------------------------------------------------
 def menu(opcion):

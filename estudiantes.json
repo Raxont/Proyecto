@@ -1,41 +1,30 @@
 [
     {
-        "nombre": "Carlos",
-        "apellido": "Andres",
-        "documento": "123456789",
-        "direccion": "Guallaba",
-        "acudiente": "Mandrina",
-        "telefono": "1234",
-        "estado": "inscrito",
-        "inicial": "Aprobado",
-        "rendimiento": "bajo",
-        "riesgo": "alto",
-        "atencion": "si"
-    },
-    {
-        "nombre": "Pedro",
-        "apellido": "Andres",
-        "documento": "123456789",
-        "direccion": "Guallaba",
-        "acudiente": "Mandrina",
-        "telefono": "1234",
-        "estado": "inscrito",
-        "inicial": "Aprobado",
-        "rendimiento": "bajo",
-        "riesgo": "alto",
-        "atencion": "si"
-    },
-    {
         "nombre": "Camilo",
-        "apellido": "Andres",
+        "apellido": "Navas",
         "documento": "123456789",
-        "direccion": "Guallaba",
-        "acudiente": "Mandrina",
-        "telefono": "1234",
+        "direccion": "Cra 9",
+        "acudiente": "Cris",
+        "telefono": "12345",
         "estado": "inscrito",
         "inicial": "Aprobado",
-        "rendimiento": "bajo",
-        "riesgo": "alto",
-        "atencion": "si"
+        "rendimiento": "alto",
+        "riesgo": "bajo",
+        "atencion": "no",
+        "NotaFinal": 90.0
+    },
+    {
+        "nombre": "Maria",
+        "apellido": "Medina",
+        "documento": "1235",
+        "direccion": "nose",
+        "acudiente": "rodolfo",
+        "telefono": "765",
+        "estado": "inscrito",
+        "inicial": "Aprobado",
+        "rendimiento": "medio",
+        "riesgo": "medio",
+        "atencion": "no",
+        "NotaFinal": 85.0
     }
 ]
